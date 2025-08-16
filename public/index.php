@@ -7,7 +7,7 @@ require_once __DIR__ . '/../public/app.php';
 
 <section>
 
-    <?php require __DIR__ . "/lista-tareas.php" ?>
+  <?php require __DIR__ . "/lista-tareas.php" ?>
 
 </section>
 

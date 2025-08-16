@@ -8,7 +8,7 @@
     <h1>Mis Tareas</h1>
       <ul>
         <?php foreach ($tareas as $tarea): ?>
-          <li><?= htmlspecialchars($tarea['titulo']) ?></li>
+          <li><?= htmlspecialchars($tarea['TITULO']) ?></li>
         <?php endforeach; ?>
       </ul>
   </section>

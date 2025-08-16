@@ -1,3 +1,4 @@
+
 <?php
 
 // Verifica si la conexión existe
@@ -11,3 +12,6 @@ $tareas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
+<?php
+
+?>
