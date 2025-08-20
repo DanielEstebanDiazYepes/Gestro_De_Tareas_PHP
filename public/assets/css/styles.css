@@ -1,0 +1,125 @@
+/* Estilos básicos para el gestor de tareas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eee;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+h2 {
+    color: #34495e;
+    margin-bottom: 15px;
+}
+
+/* Estilos para la lista de tareas */
+.seccion-tareas {
+    margin-bottom: 30px;
+}
+
+.lista-tareas {
+    list-style: none;
+}
+
+.tarea-item {
+    background: #f8f9fa;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 4px solid #3498db;
+}
+
+.tarea-item h3 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.tarea-item p {
+    color: #7f8c8d;
+    margin-bottom: 5px;
+}
+
+.tarea-item small {
+    color: #95a5a6;
+    font-size: 0.8em;
+}
+
+.no-tareas {
+    text-align: center;
+    color: #7f8c8d;
+    font-style: italic;
+    padding: 20px;
+}
+
+/* Estilos para el formulario */
+.seccion-formulario {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.grupo-form {
+    margin-bottom: 15px;
+}
+
+.grupo-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.grupo-form input,
+.grupo-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.grupo-form textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+.btn-guardar {
+    background: #27ae60;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-guardar:hover {
+    background: #229954;
+}

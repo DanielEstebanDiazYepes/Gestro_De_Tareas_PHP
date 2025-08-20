@@ -1,6 +1,9 @@
 
 <?php
 
+var_dump("Ejecutando consulta..."); // Agrega esta línea para depurar
+
+
 // Verifica si la conexión existe
 if (!isset($pdo)) { 
     die("Error: No se pudo establecer conexión a la base de datos");

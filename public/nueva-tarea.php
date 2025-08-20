@@ -1,33 +1,26 @@
 <?php
-require_once __DIR__ . '/../app/database/conexion.php';
+/**
+ * Formulario para agregar nuevas tareas
+ * Los datos se envían a procesar-tarea.php
+ */
 ?>
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Agregar Nueva Tarea</title>
-
-    <link rel="stylesheet" href="/assets/css/index.css">
-
-</head>
-<body>
-    <h1>Agregar Nueva Tarea</h1>
+<section class="seccion-formulario">
+    <h2>➕ Nueva Tarea</h2>
     
-    <form action="procesar-tarea.php" method="POST">
-
-        <div class="form-group">
-            <label for="titulo">usuario_ID</label>
-            <input type="text" id="titulo" name="titulo" required>
+    <form action="procesar-tarea.php" method="POST" class="form-tarea">
+        <div class="grupo-form">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" required 
+                   placeholder="Ej: Comprar leche">
         </div>
         
-        <div class="form-group">
-            <label for="titulo">Título</label>
-            <input type="text" id="titulo" name="titulo" required>
+        <div class="grupo-form">
+            <label for="descripcion">Descripción (opcional):</label>
+            <textarea id="descripcion" name="descripcion" 
+                      placeholder="Detalles de la tarea..."></textarea>
         </div>
         
-        <button type="submit">Guardar Tarea</button>
+        <button type="submit" class="btn-guardar">💾 Guardar Tarea</button>
     </form>
-    
-</body>
-</html>
+</section>
