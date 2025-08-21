@@ -29,7 +29,7 @@ try {
         <header>
             <h1>📝 Mis Tareas</h1>
             <p>Hola, <?= htmlspecialchars($_SESSION['usuario']['nombre']) ?>!</p>
-            <a href="/auth/logout.php">Cerrar sesión</a>
+            <a href="/auth/logout.php" class="logout-sesion">Cerrar sesión</a>
         </header>
 
         <!-- Formulario para crear tarea -->

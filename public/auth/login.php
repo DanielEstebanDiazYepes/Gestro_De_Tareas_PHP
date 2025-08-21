@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <div class="auth-container">
-        <h2>🔐 Iniciar Sesión</h2>
+        <h2>Iniciar Sesión</h2>
         
         <!-- Mostrar mensajes de éxito (si vienes del registro) -->
         <?php if (isset($_SESSION['flash']['exito'])): ?>
@@ -100,9 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </div>
 
-    <!-- Script para mejorar la experiencia de usuario -->
-    <script>
-        // Enfocar el primer campo al cargar la página
+    <script> //SCRIP PARA QUE EL FOCO INICIAL SEA EN EMAIL
         document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('email').focus();
         });

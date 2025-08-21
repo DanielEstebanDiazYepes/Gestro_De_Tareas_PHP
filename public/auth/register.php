@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt = $pdo->prepare("SELECT id FROM usuarios WHERE email = ?");
             $stmt->execute([$email]);
             
-            if ($stmt->rowCount() > 0) {
+            if ($stmt->rowCount() > 0) {//el metodo "rowCount" devuelve el numero de filas que coinciden con la consulta sql de arriba "$stmt"
                 $errores[] = "El email ya está registrado";
             } else {
                 // Hash de contraseña
@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <div class="auth-container">
-        <h2>📝 Registrarse</h2>
+        <h2>Registrarse</h2>
         
         <?php if (!empty($errores)): ?>
             <div class="errores">

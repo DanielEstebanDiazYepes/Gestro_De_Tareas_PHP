@@ -1,34 +1,42 @@
 /* ===== ESTILOS PARA EDITAR TAREA ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #2d3748;
+}
+
 .editar-container {
     max-width: 600px;
-    margin: 50px auto;
-    padding: 30px;
+    margin: 0 auto;
     background: white;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
 .editar-header {
     text-align: center;
-    margin-bottom: 30px;
+    padding: 30px;
+    background: linear-gradient(135deg, #4a6fc7 0%, #6b46c1 100%);
+    color: white;
 }
 
 .editar-header h1 {
-    color: #2d3748;
-    margin-bottom: 10px;
     font-size: 2em;
+    margin-bottom: 10px;
+    font-weight: 300;
 }
 
 .editar-header p {
-    color: #718096;
+    opacity: 0.9;
     font-size: 1.1em;
 }
 
 .form-editar {
+    padding: 30px;
     background: #f8fafc;
-    padding: 25px;
-    border-radius: 12px;
-    border: 2px solid #e2e8f0;
 }
 
 .form-group {
@@ -40,17 +48,19 @@
     margin-bottom: 8px;
     font-weight: 600;
     color: #2d3748;
+    font-size: 14px;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 15px;
+    padding: 12px 15px;
     border: 2px solid #e2e8f0;
-    border-radius: 10px;
+    border-radius: 8px;
     font-size: 16px;
     transition: all 0.3s ease;
     font-family: inherit;
+    background: white;
 }
 
 .form-group input:focus,
@@ -61,8 +71,9 @@
 }
 
 .form-group textarea {
-    min-height: 120px;
+    min-height: 100px;
     resize: vertical;
+    line-height: 1.5;
 }
 
 .botones-accion {
@@ -73,7 +84,7 @@
 
 .btn-guardar {
     flex: 1;
-    padding: 15px;
+    padding: 15px 25px;
     background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
     color: white;
     border: none;
@@ -91,7 +102,7 @@
 
 .btn-cancelar {
     flex: 1;
-    padding: 15px;
+    padding: 15px 25px;
     background: #a0aec0;
     color: white;
     border: none;
@@ -112,12 +123,12 @@
 .estado-tarea {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     margin-bottom: 20px;
     padding: 15px;
-    background: #fff1f0;
-    border-radius: 10px;
-    border-left: 4px solid #fc8181;
+    background: #fffaf0;
+    border-radius: 8px;
+    border-left: 4px solid #ed8936;
 }
 
 .estado-tarea.completada {
@@ -137,18 +148,120 @@
     accent-color: #48bb78;
 }
 
+.checkbox-container label {
+    margin: 0;
+    font-weight: 500;
+    color: #2d3748;
+    font-size: 16px;
+}
+
+/* Checkbox del formulario */
+.form-group .checkbox-container {
+    padding: 15px;
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    margin-top: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group .checkbox-container:hover {
+    border-color: #cbd5e0;
+}
+
 /* Responsive */
 @media (max-width: 600px) {
-    .editar-container {
-        margin: 20px;
-        padding: 20px;
+    body {
+        padding: 15px;
     }
-
-    .botones-accion {
-        flex-direction: column;
+    
+    .editar-container {
+        margin: 0;
+        border-radius: 10px;
+    }
+    
+    .editar-header {
+        padding: 20px;
     }
     
     .editar-header h1 {
         font-size: 1.5em;
     }
+    
+    .form-editar {
+        padding: 20px;
+    }
+    
+    .botones-accion {
+        flex-direction: column;
+    }
+    
+    .btn-guardar,
+    .btn-cancelar {
+        width: 100%;
+    }
+}
+
+/* Mejoras de accesibilidad */
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+/* Efectos de transición */
+.editar-container,
+.form-editar,
+.form-group input,
+.form-group textarea,
+.btn-guardar,
+.btn-cancelar {
+    transition: all 0.3s ease;
+}
+
+/* Estilos para los botones de acción */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: #4299e1;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #3182ce;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: #ed8936;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #dd6b20;
+    transform: translateY(-2px);
+}
+
+.btn-danger {
+    background: #f56565;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #e53e3e;
+    transform: translateY(-2px);
 }
